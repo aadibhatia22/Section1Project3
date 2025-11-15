@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import readline from "readline";
+
 
 const API_Key = "qiQfLpGuYWpP3BRYT4BIxdEEDLRtmwj3hr4v4IySLdFaceoffGjhRJ35eQ6z11Bs"
 
@@ -84,10 +84,24 @@ async function main() {
     const [uniqueTeams, uniqueCities, uniqueStates, uniqueCountries] = await getUniqueness(teams);
 
     //printing results
+
+    
     console.log("Unique Teams:", uniqueTeams.size);
+    for (const  UTeams of uniqueTeams) {
+        console.log(UTeams);
+    }
     console.log("Unique Cities:", uniqueCities.size);
+    for (const  Ucities of uniqueCities) {
+        console.log(Ucities);
+    }
     console.log("Unique States:", uniqueStates.size);
+    for (const  Ustates of uniqueStates) {
+        console.log(Ustates);
+    }
     console.log("Unique Countries:", uniqueCountries.size);
+    for (const  Ucountries of uniqueCountries) {
+        console.log(Ucountries);
+    }
 
 
 
